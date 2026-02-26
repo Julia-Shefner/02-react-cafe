@@ -38,7 +38,7 @@ function App() {
       <VoteOptions
         onVote={handleVote}
         onReset={resetVotes}
-        canReset={totalVotes}
+        canReset={totalVotes > 0 ? true : false}
       />
       {totalVotes === 0 ? (
         <Notification />
